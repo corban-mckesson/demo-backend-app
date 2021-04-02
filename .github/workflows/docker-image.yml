@@ -28,11 +28,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: fjogeleit/http-request-action@v1.8.0
       - name: HTTP Request Action
-      - with:
-          url: '
-                https://app.harness.io/gateway/api/webhooks/CcTEeEYScYNb0XwduQvmTi2vPPmEOfwbYt51zaE1?accountId=JUGxua0aTTSJ6X3K7Y21Ug'
+        uses: fjogeleit/http-request-action@v1.8.0
+        with:
+          url: 'https://app.harness.io/gateway/api/webhooks/CcTEeEYScYNb0XwduQvmTi2vPPmEOfwbYt51zaE1?accountId=JUGxua0aTTSJ6X3K7Y21Ug'
           method: 'POST'
           contentType: 'application/json'
           data: '{"application":"BE1tH06USyupdp-eaTk6xQ","parameters":{"Environment":"Dev","Service":"backend","InfraDefinition_KUBERNETES":"Dev-k8s","jiraRequest":"HAR-3"},"artifacts":[{"artifactSourceName":"demo-local-docker-repo_demo-backend-app","service":"backend","buildNumber":"001"}]}'
